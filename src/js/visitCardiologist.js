@@ -1,5 +1,5 @@
 import DOMElement from "./DomElement.js";
-import Visit from "./visit.js";
+import Visit from "./Visit.js";
 import { renderCommonFields } from "./commonFields.js";
 
 class VisitCardiologist extends Visit {

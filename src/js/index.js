@@ -1,9 +1,9 @@
 import DOMElement from "./DomElement.js";
-import Modal from "./modal.js";
+import Modal from "./Modal.js";
 import API from "./API.js";
-import visitCardiologist from "./visitCardiologist.js";
-import VisitDentist from "./visitDentist.js";
-import VisitTherapist from "./visitTherapist.js";
+import VisitCardiologist from "./VisitCardiologist.js";
+import VisitDentist from "./VisitDentist.js";
+import VisitTherapist from "./VisitTherapist.js";
 import { generateCardElements } from "./generateCardElements.js";
 import { filter } from "./filter.js";
 
@@ -85,12 +85,12 @@ async function main() {
     });
   });
 
-  const age = "25"
- const person = {
-   name: "Vania",
-   age: "22"
- }
-person.age = age
+  const age = "25";
+  const person = {
+    name: "Vania",
+    age: "22",
+  };
+  person.age = age;
 }
 
 main();
@@ -134,7 +134,7 @@ function setCreateVisit() {
 
     if (doctor === "cardiologist") {
       !isEmpty && modalBody.children[1].remove();
-      const formVisitCardiologist = new visitCardiologist(
+      const formVisitCardiologist = new VisitCardiologist(
         "",
         onSubmit
       ).render();

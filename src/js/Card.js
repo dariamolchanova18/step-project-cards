@@ -1,8 +1,8 @@
 import API from "./API.js";
 import DOMElement from "./DomElement.js";
-import VisitCardiologist from "./visitCardiologist.js";
-import VisitDentist from "./visitDentist.js";
-import VisitTherapist from "./visitTherapist.js";
+import VisitCardiologist from "./VisitCardiologist.js";
+import VisitDentist from "./VisitDentist.js";
+import VisitTherapist from "./VisitTherapist.js";
 import { createDoctorField } from "./createDoctorField.js";
 
 class Card {
@@ -146,10 +146,9 @@ class Card {
   }
 
   edit() {
-    API.updateCard(this.id, this.values)
-    .then(() => {
-        console.log('updateCard')
-    })
+    API.updateCard(this.id, this.values).then(() => {
+      console.log("updateCard");
+    });
   }
 }
 
